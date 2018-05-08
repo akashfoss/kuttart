@@ -1,4 +1,3 @@
-<?php include('server.php') ?>
 <!DOCTYPE html>
 <html>
 <!-- Head -->
@@ -37,24 +36,84 @@
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <script type="text/javascript" src="login.js"></script>
+
  </head>
 <!-- //Head -->
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+/* Set a style for  buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+button:hover {
+    opacity:1;
+}
+
+/* Add padding to container elements */
+.container {
+
+    padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for save button on extra small screens */
+@media screen and (max-width: 300px) {
+    .savebtn {
+       width: 100%;
+    }
+}
+</style>
 <!-- Body -->
 
 <body>
-
-    <div class="topnav" id="myTopnav">
-  <a href="../web/index.php">Home</a>
+  <div class="topnav" id="myTopnav">
+  <a href="../web/index.html">Home</a>
     <div class="dropdown">
     <button class="dropbtn">Products
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="products/men.php">Men</a>
-      <a href="products/women.php">Women</a>
-      <a href="products/kids.php">Kids</a>
-      <a href="products/electronics.php">Electronics</a>
-      <a href="products/toys.php">Toys</a>
+      <a href="products/men.html" class="activeyellow">Men</a>
+      <a href="products/women.html">Women</a>
+      <a href="products/kids.html">Kids</a>
+      <a href="products/electronics.html">Electronics</a>
+      <a href="products/toys.html">Toys</a>
     </div>
   </div>
   <a href="#contact">Contact</a>
@@ -62,21 +121,46 @@
   <a href="#about">About</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
   <div class="topnav-right">
-      <a href="../web/login.php" class="active">Sign in</a>
+      <a href="login.html" class="active">Sign in</a>
     </div>
-</div>   
+</div>  
 
-  <div class="login-page">
-  <div class="form">
-    <form class="login-form" method="post" action="server.php"> 
-      <input type="text" name="username" placeholder="username"/>
-      <input type="password" name="password" placeholder="password"/>
-      <button type="submit" class="btn" name="login_user">login</button>
-      <p class="message">Not registered? <a href="../web/register.php">Create an account</a></p>
-    </form>
+
+<form action="/action_page.php" style="border:0px solid #ccc ">
+  <div class="container">
+    <h1 style="color:red"><center>PROFILE</center></h1>
+
+    <hr>
+    <label for="email"><b>Name</b></label>
+    <input type="text" placeholder="Name" name="name" required>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Password" name="psw" required>
+
+     <label for="Address"><b>Address</b></label>
+    <input type="text" placeholder="Address" name="Address" required>
+
+    <label for="City"><b>City</b></label>
+    <input type="text" placeholder="City" name="City" required>
+
+    <label for="Country"><b>Country</b></label>
+    <input type="text" placeholder="Country" name="Country" required>
+
+    <label for="Pin"><b>Pin</b></label>
+    <input type="text" placeholder="Pin" name="Pin" required>
+    
+
+    <div class="clearfix">
+      <button type="submit" class="savebtn">Save</button>
+    </div>
   </div>
-</div>
-<div class="copyright text-center">
+</form>
+
+
+    <div class="copyright text-center">
       <p>© 2018 Shopping Cart. Kuttart | Design by Developers at CSE-B</p>
     </div>    
   </div>

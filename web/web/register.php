@@ -42,15 +42,14 @@
 <!-- Body -->
 
 <body>
-
-    <div class="topnav" id="myTopnav">
+  <div class="topnav" id="myTopnav">
   <a href="../web/index.php">Home</a>
     <div class="dropdown">
     <button class="dropbtn">Products
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="products/men.php">Men</a>
+      <a href="products/men.php" class="activeyellow">Men</a>
       <a href="products/women.php">Women</a>
       <a href="products/kids.php">Kids</a>
       <a href="products/electronics.php">Electronics</a>
@@ -62,21 +61,25 @@
   <a href="#about">About</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
   <div class="topnav-right">
-      <a href="../web/login.php" class="active">Sign in</a>
+      <a href="login.php" class="active">Sign in</a>
     </div>
 </div>   
 
-  <div class="login-page">
+
+<div class="login-page">
   <div class="form">
-    <form class="login-form" method="post" action="server.php"> 
-      <input type="text" name="username" placeholder="username"/>
-      <input type="password" name="password" placeholder="password"/>
-      <button type="submit" class="btn" name="login_user">login</button>
-      <p class="message">Not registered? <a href="../web/register.php">Create an account</a></p>
+    <form class="register-form" method="post" action="server.php" style="display: block;">
+      <input placeholder="username" name="username" type="text">
+      <input placeholder="email" name="email" type="email">
+      <input placeholder="password" name="password_1" type="password">
+      <input placeholder="password" type="password" name="password_2">
+      <button type="submit" class="btn" name="reg_user">create</button>
+      <p class="message">Already registered? <a href="../web/login.php">Sign In</a></p>
     </form>
   </div>
 </div>
-<div class="copyright text-center">
+
+    <div class="copyright text-center">
       <p>© 2018 Shopping Cart. Kuttart | Design by Developers at CSE-B</p>
     </div>    
   </div>
